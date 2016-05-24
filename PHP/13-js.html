@@ -1,0 +1,42 @@
+<html>
+<meta charset=utf-8>
+<title> Form Đăng Ký</title>
+<body>
+<script type="text/javascript">
+function check() {
+	var ten = document.dangky.ten.value;
+	var diachi = document.dangky.diachi.value;
+	var nghe = document.dangky.nghe.value;
+	var ghichu = document.dangky.ghichu.value;
+	if (ten =="") {
+		alert ("Bạn chưa nhập tên");
+		return false;
+	}
+	else if (diachi =="") {
+		alert ("Bạn chưa nhập Địa chỉ");
+		return false;
+	}
+	else if (nghe =="") {
+		alert ("Bạn chưa nhập Nghề");
+		return false;
+	}
+	else if (ghichu =="") {
+		alert ("Bạn chưa nhập Ghi chú");
+		return false;
+	}
+	else
+		return true;
+}
+</script>
+<center>
+Form Đăng Ký<br>
+<form name="dangky" method="post" action="13.php" onsubmit="return check()">
+Tên: <input type="text" name="ten"><br>
+Địa chỉ: <input type="text" name="diachi"><br>
+Nghề: <input type="text" name="nghe"><br>
+Ghi chú: <textarea name="ghichu">Đây là ghi chú</textarea><br>
+<input type="reset" value="Xóa"> <input type="submit" value="Đăng Ký" name="đăng ký">
+</form>
+</center>
+</body>
+</html>

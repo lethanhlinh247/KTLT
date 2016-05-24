@@ -1,0 +1,72 @@
+<html>
+<meta charset="utf-8">
+<title> Đăng Ký </title>
+<body>
+<script type="text/javascript">
+function check() {
+	var masv=document.dangky.masv.value;
+	var hoten=document.dangky.hoten.value;
+	var ngaysinh=document.dangky.ngaysinh.value;
+	var noisinh=document.dangky.noisinh.value;
+	var lop=document.dangky.lop.value;
+	if (masv =="") {
+		alert("Bạn chưa nhập mã sinh viên");
+		return false;
+	}
+	else if (hoten =="") {
+		alert("Bạn chưa nhập họ tên sinh viên");
+		return false;
+	}
+	else if (ngaysinh =="") {
+		alert("Bạn chưa nhập ngày sinh sinh viên");
+		return false;
+	}
+	else if (noisinh =="") {
+		alert("Bạn chưa nhập nơi sinh sinh viên");
+		return false;
+	}
+	else if (lop =="") {
+		alert("Bạn chưa nhập lop sinh viên");
+		return false;
+	}
+	else
+		return true;
+}
+</script>
+<center>
+Đăng Ký
+<form name="dangky" method="post" action="15.php" onsubmit="return check()">
+<table>
+<tr>
+	<td> Mã sinh viên </td>
+	<td> <input type="text" name="masv"></td>
+</tr>
+<tr>
+	<td>Họ và tên </td>
+	<td> <input type="text" name ="hoten"></td>
+</tr>
+<tr>
+	<td>Ngày sinh </td>
+	<td> <input type="text" name ="ngaysinh"></td>
+</tr>
+<tr>
+	<td>Giới tính </td>
+	<td> <input type="radio" name ="gioitinh" value="Nam" checked> Nam
+	<input type="radio" name="gioitinh" value="Nữ"> Nữ</td>
+</tr>
+<tr>
+	<td>Nơi sinh </td>
+	<td> <input type="text" name ="noisinh"></td>
+</tr>
+<tr>
+	<td>Lớp </td>
+	<td> <input type="text" name ="lop"></td>
+</tr>
+</table>
+<br>
+	<input type="reset" value="Nhập lại">
+	<input type="submit" value="Đăng Ký" name="login">
+</form>
+</center>
+</body>
+</html>
